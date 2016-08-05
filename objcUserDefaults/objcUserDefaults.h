@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char objcUserDefaultsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <objcUserDefaults/PublicHeader.h>
 
-
+#if !VDStandardUserDefaults
+#define VDStandardUserDefaults \
+[NSUserDefaults standardUserDefaults]
+#endif
